@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      userInput: ""
+    };
+  }
+  handleChange = event => {
+    this.setState({ userInput: event.target.value });
+  };
+  render() {
+    return (
+      <div id="App">
+        <h3>Type into input box and your text will be mirrored below</h3>
+        <textarea type="text" onChange={this.handleChange} />
+        <p>{this.state.userInput}</p>
+      </div>
+    );
+  }
 }
 
 export default App;
