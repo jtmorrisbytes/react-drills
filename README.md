@@ -295,7 +295,7 @@ export default App;
 <summary><code> app-5/src/Image.js </code></summary>
 
 ```js
-import React, {Component} from 'react'
+import React, { Component } from "react";
 
 export default class Image extends Component {
   render() {
@@ -304,7 +304,7 @@ export default class Image extends Component {
         <img src={this.props.url} />
         <div>Error 599</div>
       </div>
-    )
+    );
   }
 }
 ```
@@ -391,7 +391,7 @@ export default App;
 <summary><code> app-6/src/Todo.js </code></summary>
 
 ```js
-import React, {Component} from 'react';
+import React, { Component } from "react";
 
 export default class ToDo extends Component {
   render() {
@@ -504,7 +504,7 @@ export default NewTask;
 <summary> <code> app-7/src/List.js </code> </summary>
 
 ```js
-import React, {Component} from 'react';
+import React, { Component } from "react";
 import Todo from "./Todo";
 
 export default class List extends Comonent {
@@ -512,7 +512,7 @@ export default class List extends Comonent {
     let list = this.props.tasks.map((element, index) => {
       return <Todo key={index} task={element} />;
     });
-    
+
     return <div>{list}</div>;
   }
 }
@@ -525,7 +525,7 @@ export default class List extends Comonent {
 <summary> <code> app-7/src/Todo.js </code> </summary>
 
 ```js
-import React, {Component} from 'react';
+import React, { Component } from "react";
 
 export default class Todo extends Component {
   render() {
@@ -916,9 +916,7 @@ class Details extends Component {
   componentDidMount() {
     axios
       .get(
-        `https://practiceapi.devmountain.com/products/${
-          this.props.match.params.id
-        }`
+        `https://practiceapi.devmountain.com/products/${this.props.match.params.id}`
       )
       .then(response => {
         this.setState({ item: response.data });
