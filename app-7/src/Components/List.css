@@ -1,0 +1,5 @@
+.List {
+  overflow: scroll;
+  text-align: left;
+  max-height: 88.75vh;
+}
